@@ -35,6 +35,7 @@ body {
   color: var(--primary-text-color);
   background-color: var(--primary-white-color);
   font-family: var(--main-font);
+  font-style: normal;
   letter-spacing: 0.03em;
 }
 
@@ -46,6 +47,10 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+textarea {
+  resize: none;
 }
 
 .list {
@@ -890,8 +895,66 @@ h6 {
   transform: translate(-50%, -50%) scale(1);
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+
   background-color: var(--primary-white-color);
   border-radius: 4px;
+}
+
+.modal-title {
+  display: block;
+  margin-bottom: 12px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+
+  color: var(--title-text-color);
+}
+
+.modal-form__item {
+  margin-bottom: 10px;
+}
+
+.modal-form__item label {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+
+  color: var(--primary-text-color);
+}
+
+.modal-form__item span {
+  margin-bottom: 4px;
+}
+
+.modal-form__item input {
+  position: relative;
+  padding-left: 12px;
+  height: 40px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.modal-form__item textarea {
+  padding: 12px 16px;
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.modal-form__item textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .close {
