@@ -995,6 +995,7 @@ textarea {
 .form-mailing__checkbox {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-bottom: 30px;
 }
 
@@ -1002,9 +1003,9 @@ textarea {
   width: 16px;
   height: 15px;
   margin-right: 7px;
+
   border-radius: 2px;
   border: 2px solid #000000;
-  transform: translateY(4px);
 }
 
 .form-input-checkbox:checked + .form-svg-checkbox {
@@ -1013,6 +1014,8 @@ textarea {
 }
 
 .form-mailing__span {
+  margin-right: 4px;
+
   font-size: 14px;
   line-height: 1.714;
 
