@@ -1004,7 +1004,7 @@ textarea {
   margin-right: 7px;
   border-radius: 2px;
   border: 2px solid #000000;
-  transform: translateY(2px);
+  transform: translateY(4px);
 }
 
 .form-input-checkbox:checked + .form-svg-checkbox {
