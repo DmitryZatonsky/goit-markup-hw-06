@@ -908,7 +908,6 @@ textarea {
   display: block;
   margin-bottom: 12px;
 
-  font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -954,16 +953,6 @@ textarea {
   border-radius: 4px;
 }
 
-.modal-form__label:hover .modal-form__svg,
-.modal-form__label:focus .modal-form__svg,
-.modal-form__input:hover,
-.modal-form__input:focus,
-.modal-form__textarea:hover,
-.modal-form__textarea:focus {
-  border-color: var(--accent-color);
-  fill: var(--accent-color);
-}
-
 .modal-form__svg {
   position: absolute;
   top: 50%;
@@ -988,6 +977,19 @@ textarea {
   border-radius: 4px;
 }
 
+.modal-form__input:hover,
+.modal-form__input:focus,
+.modal-form__textarea:hover,
+.modal-form__textarea:focus {
+  border-color: var(--accent-color);
+  outline-style: none;
+}
+
+.modal-form__input:hover ~ .modal-form__svg,
+.modal-form__input:focus ~ .modal-form__svg {
+  fill: var(--accent-color);
+}
+
 .modal-form__textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
@@ -1005,17 +1007,28 @@ textarea {
   margin-right: 7px;
 
   border-radius: 2px;
-  border: 2px solid #000000;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.form-svg-checkbox:hover {
+  border-color: var(--accent-color);
 }
 
 .form-input-checkbox:checked + .form-svg-checkbox {
   background-color: var(--accent-color);
   border-style: none;
+  background-origin: border-box;
+}
+
+.form-input-checkbox:hover:checked + .form-svg-checkbox {
+  background-color: var(--button-hover);
+}
+
+.form-input-checkbox:focus + .form-svg-checkbox {
+  border: 2px solid var(--title-text-color);
 }
 
 .form-mailing__span {
-  margin-right: 4px;
-
   font-size: 14px;
   line-height: 1.714;
 
