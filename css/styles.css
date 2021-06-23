@@ -977,6 +977,14 @@ textarea {
   border-radius: 4px;
 }
 
+.modal-form__label:hover .modal-form__input {
+  border-color: var(--accent-color);
+}
+
+.modal-form__label:hover .modal-form__svg {
+  fill: var(--accent-color);
+}
+
 .modal-form__input:hover,
 .modal-form__input:focus,
 .modal-form__textarea:hover,
